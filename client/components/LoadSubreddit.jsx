@@ -26,7 +26,7 @@ class LoadSubreddit extends React.Component {
 
   }
 
-  handleSubmit(e ) {
+  handleSubmit(e ) {  //handleSubmit wouldn't be needed if we used Divs in the render except it would handle an input.
     e.preventDefault()
     this.props.dispatch(fetchPosts(this.state.subreddit))
   }
@@ -35,7 +35,7 @@ class LoadSubreddit extends React.Component {
   render() {
     return <div> 
 
-      <form onSubmit={this.handleSubmit.bind(this)}>
+      <form onSubmit={this.handleSubmit.bind(this)}>  {/* this is the line we would change to a div */}
         <input name='subreddit' onChange={this.handleChange}type="text" placeholder='Enter subreddit'/>
         <input type="submit" value="Fetch Posts" />
       </form>
