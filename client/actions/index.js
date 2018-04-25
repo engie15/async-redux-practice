@@ -18,6 +18,7 @@ export const receivePosts = (posts) => {
 }
 
 export const showError = (errorMessage) => {
+  console.log(errorMessage)
   return {
     type: SHOW_ERROR,
     errorMessage: errorMessage
